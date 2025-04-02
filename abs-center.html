@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>abs-center</title>
+    <style>
+      * {
+        margin: 0;
+        border: 0;
+        box-sizing: border-box;
+        background-color: black;
+        box-shadow: inset 0 0 1px white;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+      section {
+        width: 100px;
+        height: 200px;
+        margin: 20px;
+        position: relative;
+      }
+      div {
+        width: 50px;
+        height: 50px;
+        background-color: violet;
+      }
+      .m1 div {
+        position: absolute;
+        margin: auto;
+        inset: 0 0 0 0;
+      }
+      .m2 div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .m3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .m4 {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="m1">
+      <div>border</div>
+    </section>
+    <section class="m2">
+      <div>transform</div>
+    </section>
+    <section class="m3">
+      <div>flex</div>
+    </section>
+    <section class="m4">
+        <div>grid</div>
+    </section>
+    <section class="m5"></section>
+    <section class="m6"></section>
+  </body>
+</html>
